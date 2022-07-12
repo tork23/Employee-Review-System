@@ -1,0 +1,15 @@
+{
+  "name": "employee-review-system",
+  "version": "1.0.0",
+  "description": "This app allows employees to submit feedback toward each other’s",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prajwal Torkadi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
