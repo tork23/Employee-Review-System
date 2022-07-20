@@ -1,0 +1,26 @@
+<div class="container-fluid mt-4">
+    <div class="container d-flex justify-content-center mt-4">
+        <!-- Admin Assign Card -->
+        <div class="row col-md-6 card">
+            <h4 class="text-center">Assign New Admin</h4>
+            <hr>
+            <form method="POST" action="/admin/newAdmin" class="mt-3">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                    name="newAdmin">
+
+                    <option selected disabled>Click here...</option>
+                    <% for(let i=0; i < employeeList.length; i++){ %>
+                        <option value="<%= employeeList[i].id %>">
+                            <%= employeeList[i].name %> <%= employeeList[i].last_name %>
+                        </option>
+                    <%}%>
+                </select>
+
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

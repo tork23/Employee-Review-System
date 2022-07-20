@@ -1,0 +1,49 @@
+<div class="container-fluid mt-4">
+
+    <div class="container d-flex justify-content-center mt-4">
+        <!-- Card -->
+        <div class="row col-md-6 card">
+            <h4 class="text-center">Assign Reviewers</h4>
+            <hr>
+            
+            <form method="POST" action="/admin/set-Reviewers" class="mt-2 card-body">
+                <div>
+                    <h6>Reviewee</h6>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                        name="Recipient">
+                
+                        <option selected disabled>Select Reviewee</option>
+
+                        <% for(let i=0; i < employeeList.length; i++){ %>
+
+                            <option value="<%= employeeList[i].id  %>">
+                                <%= employeeList[i].name %> <%= employeeList[i].last_name %>
+                            </option>
+
+                        <% } %>
+                    </select>
+                </div>
+
+                <div>
+                    <h6>Reviewer</h6>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                        name="Reviewer">
+
+                        <option selected disabled>Select Reviewer</option>
+  
+                        <% for(let i = 0; i < employeeList.length; i++){ %>
+                            <option value="<%= employeeList[i].id %>">
+                                <%= employeeList[i].name %> <%= employeeList[i].last_name %>
+                            </option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
