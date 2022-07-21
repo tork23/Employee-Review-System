@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const port = 8000;
+const port = process.env.PORT || 8000;
 const app = express();
 
 const expressLayouts = require('express-ejs-layouts');
@@ -41,7 +41,8 @@ app.use(session({
         maxAge : (1000 * 60 * 100)
     },
     store:MongoStore.create({
-        mongoUrl: 'mongodb://localhost:27017/habit',
+        // mongoUrl: 'mongodb://localhost/ERS'
+        mongoUrl: `mongodb+srv:Joyous:Manual@cluster1.mcl2r.mongodb.net/?retryWrites=true&w=majority`,
         autoRemove : 'disabled',
     }, function(err){
         console.log(err || 'connect-mongodb setup');

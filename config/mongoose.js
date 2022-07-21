@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost/ERS');
+// Connect to local MongoDB
+// mongoose.connect('mongodb://localhost/ERS');
+
+// Connect to MongoDb Atlas
+mongoose.connect('mongodb+srv://Joyous:Manual@cluster1.mcl2r.mongodb.net/?retryWrites=true&w=majority');
 
 // Aquire connection
 const db = mongoose.connection;
