@@ -41,8 +41,8 @@ app.use(session({
         maxAge : (1000 * 60 * 100)
     },
     store:MongoStore.create({
-        // mongoUrl: 'mongodb://localhost/ERS'
-        mongoUrl: `mongodb+srv:Joyous:Manual@cluster1.mcl2r.mongodb.net/?retryWrites=true&w=majority`,
+        mongoUrl: 'mongodb://localhost/ERS',
+        // mongoUrl: `mongodb+srv:Joyous:Manual@cluster1.mcl2r.mongodb.net/?retryWrites=true&w=majority`,
         autoRemove : 'disabled',
     }, function(err){
         console.log(err || 'connect-mongodb setup');
