@@ -1,0 +1,46 @@
+<form action="/users/create-user" method="POST" class="position-absolute top-50 start-50 translate-middle">
+    <!-- Heading -->
+    <div class="mb-4">
+        <h1> Sign up </h1>
+    </div>
+    
+    <div class="row mb-4">
+        <!-- Name -->
+        <div class="col">
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
+        </div>
+        <!-- Last name -->
+        <div class="col">
+          <input type="text" class="form-control" name="last_name"  placeholder="Last Name" required>
+        </div>
+    </div>
+
+    <!-- Email -->
+    <div class="row mb-4">
+      <div class="col-sm-12">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="row mb-4">
+      <div class="col-sm-12">
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
+      </div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="row mb-4">
+        <div class="col-sm-12">
+          <input type="password" class="form-control" name="password2" placeholder="Confirm Password" required>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <div class="mb-4">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
+    
+</form>
+
+

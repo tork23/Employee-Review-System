@@ -1,0 +1,29 @@
+<header id="layout-header">
+    <nav class="navbar navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Employee Review System</a>
+            <!-- If user is logged in but not an admin-->
+          <% if (locals.user && !locals.user.isAdmin){ %>
+            <div class="d-flex">
+              <a class="navbar-brand" href="#"><%= user.name %></a>
+              <a class="navbar-brand" href="/users/logout">Logout</a>
+            </div>
+            <!-- If user is logged in and is an Admin -->
+          <% }else if(locals.user && locals.user.isAdmin){ %>
+            <div class="d-flex">
+              <a class="navbar-brand" href="/admin/admin-page">Assign Work</a>
+              <a class="navbar-brand" href="/admin/view-employees">Employees</a>
+              <a class="navbar-brand" href="/users/register">Register</a>
+              <a class="navbar-brand" href="/admin/admin-assign-page">Assign Admin</a>
+              <a class="navbar-brand" href="/users/logout">Logout</a>
+            </div>
+            <!-- User not logged in -->
+          <% }else {%>
+            <div class="d-flex">
+              <a class="navbar-brand" href="/users/login">Log In</a>
+              <a class="navbar-brand" href="/users/register">Sign Up</a>
+            </div>
+          <% } %>
+        </div>
+    </nav>
+</header>
